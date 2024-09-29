@@ -1,0 +1,9 @@
+cipher_app/
+│
+├── app.py
+├── static/
+│   └── styles.css
+├── templates/
+│   └── index.html
+└── ciphers.py
+

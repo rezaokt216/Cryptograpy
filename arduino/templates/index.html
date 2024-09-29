@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Enkripsi & Dekripsi</title>
+</head>
+<body>
+    <h1>Program Enkripsi</h1>
+    <form action="/encrypt" method="post">
+        <input type="text" name="key" placeholder="Masukkan Kunci" required>
+        <textarea name="plaintext" placeholder="Masukkan Plaintext" required></textarea>
+        <select name="cipher_type">
+            <option value="vigenere">Vigenere Cipher</option>
+            <!-- Tambahkan opsi lainnya di sini -->
+        </select>
+        <button type="submit">Enkripsi</button>
+    </form>
+    
+    <form action="/decrypt" method="post">
+        <input type="text" name="key" placeholder="Masukkan Kunci" required>
+        <textarea name="ciphertext" placeholder="Masukkan Ciphertext" required></textarea>
+        <select name="cipher_type">
+            <option value="vigenere">Vigenere Cipher</option>
+            <!-- Tambahkan opsi lainnya di sini -->
+        </select>
+        <button type="submit">Dekripsi</button>
+    </form>
+</body>
+</html>
